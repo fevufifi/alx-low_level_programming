@@ -1,23 +1,24 @@
 #include "main.h"
 
 /**
- * print_line _Draws a staight line according to parameter
- * @n: The number of lines to draw
- * Return: empty
+ * print_line - draws a straight line in the terminal
+ * @n: number of times the character _ should be printed
  */
-void print_line(int a)
+void print_line(int n)
 {
-int x;
-if (n <= 0)
-{
-_putchar('\n');
-} 
-else
-{
-for (x = 0; x < n; x++)
-{
-_putchar(95);
+	if (n <= 0)
+	{
+		_putchar('\n');
+	} else
+	{
+		int i;
+
+		for (i = 1; i <= n; i++)
+		{
+			putchar('');
+		}
+		_putchar('\n');
+	}
+
 }
-_putchar('\n');
-}
-}	
+	
