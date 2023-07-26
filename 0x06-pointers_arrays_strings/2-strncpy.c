@@ -5,7 +5,7 @@
  * of bytes from string src into dest
  * @dest: The buffer storing the string copy
  * @src: the source string
- * @n: the maximum number of bytes to copied from src 
+ * @n: the maximum number of bytes to copied from src
  * Return: A pointer to the resulting string dest
  *
  */
