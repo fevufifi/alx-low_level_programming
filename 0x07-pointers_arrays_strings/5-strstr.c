@@ -1,29 +1,28 @@
-#include <stdio.h>
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strstr - Entry point
- * @haystack: input
- * @needle: input
- * Return: Always 0 (Success)
+ * @haystack: first string
+ * @needle: string to be located in haystack
+ * Return: s or null
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	for (; *haystack != '\0'; haystack++)
+	while (*haystack)
 	{
-		char *l = haystack;
-		char *p = needle;
+		char *start = haystack;
+		char *end = needle;
 
-		while (*l == *p && *p != '\0')
+		while (*haystack && *end && *haystack == *end)
 		{
-			 l++;
-			 p++;
+			haystack++;
+			end++;
 		}
-
-		if (*p == '\0')
-			return (haystack);
+		if (!*end)
+			return (start);
+		haystack = (start + 1);
 	}
-
-	return (0);
+	return (NULL);
 }
